@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@1/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@1/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: 'TED中最受欢迎的十大主题',
+        subtext: 'holiday小组',
+        left: 'center',
+        align: 'right',
+        
+        
+    },
+    xAxis: {
+        name:"最受欢迎的十个标签",
+        type: 'category',
+        data: ['全球问题', 'TEDx', '科技', '贸易', '创新创意', '科学', '健康','文化','娱乐','设计']
+    },
+    yAxis: {
+        name:"统计结果",
+        type: 'value'
+    },
+    series: [{
+        data: [501, 450, 727, 348, 229, 567, 236,486,299,418],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+            color: 'rgba(220, 220, 220, 0.8)'
+        }
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

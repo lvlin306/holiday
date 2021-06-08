@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '折柱混合';
+
+option = {
+title : {
+        text: '前20位用户累计次数时长统计',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+           
+        }
+    },
+    legend: {
+        data:['上线次数','累计时长']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'],
+            axisPointer: {
+                type: 'shadow'
+            }
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '上线次数',
+            min: 0,
+            max: 30,
+            interval: 10,
+            axisLabel: {
+                formatter: '{value} 次'
+            }
+        },
+        {
+            type: 'value',
+            name: '分',
+            min: 0,
+            max: 60000,
+            interval: 10000,
+            axisLabel: {
+                formatter: '{value} 分钟'
+            }
+        }
+    ],
+    series: [
+        {
+            name:'上线次数',
+            type:'bar',
+            data:[21, 24, 30, 21, 21, 15, 12, 13, 15, 14, 11, 19,17,12,10,21,13,22,10,15]
+        },
+       
+        {
+            name:'累计时长',
+            type:'line',
+            yAxisIndex: 0,
+            data:[542695, 538126, 536395, 535517, 533358, 531422, 530883, 530242, 529654, 528784, 528353, 527156,526387,526167,525633,525392,524241,522063,521953,521785]
+        },
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

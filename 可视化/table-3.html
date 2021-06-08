@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG DATA</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">BIG DATA</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i>分析结果</i> 
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>结论</strong>
+                                    <span class="pull-right text-muted">
+                                    </span>
+                                </div>
+                                <div> <br />&nbsp &nbsp &nbsp &nbsp   用户操作大致包括5种类型remove,login,upload,download,create，<br />
+                                                   其中每种类型的用户数量都大约占20%。正在登录用户的总数大约占注册<br />
+                                                   总用户的24%。这是微博用户常用的五种行为习惯。通过这样的统计我们<br />
+                                                   可以猜测用户使用微博大概在做一些什么。</div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+            </ul>
+            
+        </nav>
+        <!--/. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+    
+                        <li>
+                        	<a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页</a>
+                        </li>
+                  <li>
+                      <a href="table.html"><i class="fa fa-table"></i>视频发布时间<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                      <li>
+                          <a href="table.html">按月周段分析</a>
+                      </li>
+                      <!-- <li>
+                          <a href="table-2.html">视频相关性</a>
+                      </li> -->
+                  	<li>
+                  	    <a href="table-3.html">按年月分析</a>
+                  	</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href=""><i class="fa fa-desktop"></i>职业分析<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                      <li>
+                          <a href="ui-elements.html">职业与演讲次数</a>
+                      </li>
+                      <li>
+                          <a href="ui-elements-2.html">职业与视频浏览量</a>
+                      </li>
+                      </ul>
+                  <li>
+                      <a href=""><i class="fa fa-bar-chart-o"></i>TOP<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                      <li>
+                          <a href="chart.html">浏览量最高</a>
+                      </li>
+                      <li>
+                          <a href="chart-2.html">讨论量最高</a>
+                      </li>
+                      <li>
+                          <a href="chart-3.html">播放量vs讨论量</a>
+                      </li>
+                      <li>
+                          <a href="chart-4.html">TED演讲词汇云图</a>
+                      </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 语言与主题的讨论<span class="fa arrow"></span></a>
+                      <ul class="nav nav-second-level">
+                      <li>
+                          <a href="tab-panel.html">语言种类统计</a>
+                      </li>
+                      <!-- <li>
+                          <a href="tab-panel-2.html">语言种类与浏览量的关系</a>
+                      </li> -->
+                      <li>
+                          <a href="tab-panel-3.html">最受欢迎的十大主题</a>
+                      </li>
+                      </ul>
+                  </li>
+                </ul>
+
+            </div>
+
+        </nav>
+		<div id="page-wrapper" >
+		    <div id="page-inner">
+			 <div class="row">
+		            <div class="col-md-12">
+		                <h1 class="page-header">
+		                    TED视频年与月之间的关系分析
+		                </h1>
+		            </div>
+		        </div>
+       <div id="page-wrapper">
+                   <div>
+                       <iframe src="result/TED视频时间段分析及相关性/年分.html"
+                           height="450px"
+                           width="500px"
+                           frameborder="0"
+                           scrolling="0"></iframe>
+                   </div> 
+				   <p>结论:和预期一样，TED演讲的视频数量逐年上升；2008年到2009年，视频数量急剧上升，涨了三倍；&nbsp 2009年之后，每年的视频数量稳定在250个左右。</p>
+       	</div>
+		<div id="page-wrapper">
+		            <div>
+		                <iframe src="result/TED视频时间段分析及相关性/年与月分.html"
+		                    height="400px"
+		                    width="700px"
+		                    frameborder="0"
+		                    scrolling="0"></iframe>
+		            </div> 
+					<p>由该热力图可以看出随着年分增长，TED视频数量的发布愈来愈多，且集中在二月和三月，由此可推断出该TED在未来将越来越受欢迎</p>
+		</div>
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>

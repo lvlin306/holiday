@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG DATA</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">BIG DATA</a>
+				
+            </div>
+			
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i>分析结果</i> 
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>结论</strong>
+                                    <span class="pull-right text-muted">
+                                    </span>
+                                </div>
+                                <div> <br />&nbsp &nbsp &nbsp &nbsp   由于每个视频都有相应的推荐视频，这个网络非常的密集。<br /><br />&nbsp &nbsp &nbsp &nbsp 这个图给了我们一个启示：无论演讲的主题多么的多样化，主题之间总会有一些联系。不存在“遗世而独立”的思想，各种科学研究和各行各业之间，都存在着千丝万缕的联系。</div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+            </ul>
+            
+        </nav>
+        <!--/. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+    
+                        <li>
+                        	<a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页</a>
+                        </li>
+                        <li>
+                            <a href="table.html"><i class="fa fa-table"></i>视频发布时间<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="table.html">按月周段分析</a>
+                            </li>
+                            <!-- <li>
+                                <a href="table-2.html">视频相关性</a>
+                            </li> -->
+                        	<li>
+                        	    <a href="table-3.html">按年月分析</a>
+                        	</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-desktop"></i>职业分析<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="ui-elements.html">职业与演讲次数</a>
+                            </li>
+                            <li>
+                                <a href="ui-elements-2.html">职业与视频浏览量</a>
+                            </li>
+                            </ul>
+                        <li>
+                            <a href=""><i class="fa fa-bar-chart-o"></i>TOP<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="chart.html">浏览量最高</a>
+                            </li>
+                            <li>
+                                <a href="chart-2.html">讨论量最高</a>
+                            </li>
+                            <li>
+                                <a href="chart-3.html">播放量vs讨论量</a>
+                            </li>
+                            <li>
+                                <a href="chart-4.html">TED演讲词汇云图</a>
+                            </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 语言与主题的讨论<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="tab-panel.html">语言种类统计</a>
+                            </li>
+                            <!-- <li>
+                                <a href="tab-panel-2.html">语言种类与浏览量的关系</a>
+                            </li> -->
+                            <li>
+                                <a href="tab-panel-3.html">最受欢迎的十大主题</a>
+                            </li>
+                            </ul>
+                        </li>
+                </ul>
+
+            </div>
+			
+
+        </nav>
+		
+		
+<div id="page-wrapper" >
+            <div id="b1">
+                <img src="./assets/images/相关性.png",height="100px",width="500px"
+                   <!-- height="700px"
+                    width="100%"
+                    frameborder="0"
+                    scrolling="0"> --></img>
+					
+            </div>      
+                
+        </div>
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>

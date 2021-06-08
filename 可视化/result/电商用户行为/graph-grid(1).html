@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%;padding-top: 10px;"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@1/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@1/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var axisData = ['Author/educator', 'Social psychologist', 'Leadership expert', 'Vulnerability researcher', 'Writer', 'Sound consultant', 'Neuroanatomist', 'Life coach; expert in leadership psychology', 'Comedian and writer', 'Model', 'Career analyst', 'Quiet revolutionary', 'Lie detector', 'Psychiatrist, psychoanalyst and Zen priest', 'Psychologist', 'Director of research, Samsung Research America', 'Illusionist, endurance artist', 'Gentleman thief', 'Blogger', 'Psychologist; happiness expert', 'Health psychologist', 'Oceanographer', 'Magician', 'Novelist', 'Writer', 'Psychologist', 'Global health expert; data visionary', 'Social activist', 'Marketer, success analyst', 'Poet'];
+var data = [47227110, 43155405, 34309432, 31168150, 22270883, 21594632, 21190883, 20685401, 20475972, 19787465, 18830983, 17629275, 16861578, 16601927, 16209727, 16097077, 15601385, 15283242, 14745406, 14689301, 14566463, 13926113, 13327101, 13298341, 13155478, 12039978, 12005869, 11443190, 10841210, 10529854];
+var links = data.map(function (item, i) {
+    return {
+        source: i,
+        target: i + 1
+    };
+});
+links.pop();
+option = {
+    title: {
+        text: '不同职业演讲者的视频浏览量'
+    },
+    tooltip: {},
+    xAxis: {
+        type : 'category',
+        boundaryGap : false,
+        data : axisData
+    },
+    yAxis: {
+        type : 'value'
+    },
+    series: [
+        {
+            type: 'graph',
+            layout: 'none',
+            coordinateSystem: 'cartesian2d',
+            symbolSize: 30,
+            label: {
+                show: true
+            },
+            edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [1,10],
+            data: data,
+            links: links,
+            lineStyle: {
+                color: '#2f4554'
+            }
+        }
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

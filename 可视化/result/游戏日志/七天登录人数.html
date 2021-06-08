@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '多 Y 轴示例';
+
+
+var colors = ['#5793f3', '#d14a61'];
+
+option = {
+    title : {
+        text: '七天登录人数比较',
+    },
+    color: colors,
+
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross'
+        }
+    },
+   
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    legend: {
+        data:['登录人数']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            axisTick: {
+                alignWithLabel: true
+            },
+            data: ['第1天','第2天','第3天','第4天','第5天','第6天','第7天']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '登录人数',
+            min: 0,
+            max: 40000,
+            position: 'right',
+            axisLine: {
+                lineStyle: {
+                    color: colors[0]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} 人'
+            }
+        },
+        {
+            
+            
+           
+        },
+        {
+            type: 'value',
+            name: '登录人数',
+            min: 0,
+            max: 40000,
+            position: 'left',
+            axisLine: {
+                lineStyle: {
+                    color: colors[2]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} 人'
+            }
+        }
+    ],
+    series: [
+        {
+            name:'登录人数',
+            type:'bar',
+            data:[11076, 16911, 19493, 21334, 25766, 31570, 33266]
+        },
+       
+        {
+            name:'登录人数',
+            type:'line',
+            yAxisIndex: 2,
+            data:[11076, 16911, 19493, 21334, 25766, 31570, 33266]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

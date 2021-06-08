@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@1/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@1/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=Q9r5et4G4qOPpuxtradDLNt2GM0Rgv6b"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '按星期分析演讲数',
+        textStyle:{					//---主标题内容样式
+        	color:'#861911'
+        },
+		 padding:[1,1,100,50]
+        /* left: 'center' */
+    },
+    /* tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} : {c} ({d}%)'
+    }, */
+    legend: {
+        left: 'center',
+        top: 'bottom',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sta', 'Sun']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            mark: {show: true},
+            dataView: {show: true, readOnly: false},
+            magicType: {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    series: [
+        /* {
+            name: '半径模式',
+            type: 'pie',
+            radius: [20, 110],
+            center: ['25%', '50%'],
+            roseType: 'radius',
+            label: {
+                show: false
+            },
+            emphasis: {
+                label: {
+                    show: true
+                }
+            },
+            data: [
+                {value: 306, name: 'Mon'},
+                {value: 327, name: 'Tue'},
+                {value: 533, name: 'Wed'},
+                {value: 552, name: 'Thu'},
+                {value: 384, name: 'Fri'},
+                {value: 338, name: 'Sta'},
+                {value: 110, name: 'Sun'},
+               
+            ]
+        }, */
+        {
+            name: '面积模式',
+            type: 'pie',
+            radius: [30, 110],
+            center: ['50%', '50%'],
+            roseType: 'area',
+            data: [
+               {value: 306, name: 'Mon'},
+               {value: 327, name: 'Tue'},
+               {value: 533, name: 'Wed'},
+               {value: 552, name: 'Thu'},
+               {value: 384, name: 'Fri'},
+               {value: 338, name: 'Sta'},
+               {value: 110, name: 'Sun'},
+            ]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

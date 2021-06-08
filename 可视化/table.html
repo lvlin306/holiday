@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG DATA</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">BIG DATA</a>
+            </div>
+
+            
+        </nav>
+        <!--/. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+    
+                        <li>
+                        	<a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页</a>
+                        </li>
+                        <li>
+                            <a href="table.html"><i class="fa fa-table"></i>视频发布时间<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="table.html">按月周段分析</a>
+                            </li>
+                            <!-- <li>
+                                <a href="table-2.html">视频相关性</a>
+                            </li> -->
+                        	<li>
+                        	    <a href="table-3.html">按年月分析</a>
+                        	</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-desktop"></i>职业分析<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="ui-elements.html">职业与演讲次数</a>
+                            </li>
+                            <li>
+                                <a href="ui-elements-2.html">职业与视频浏览量</a>
+                            </li>
+                            </ul>
+                        <li>
+                            <a href=""><i class="fa fa-bar-chart-o"></i>TOP<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="chart.html">浏览量最高</a>
+                            </li>
+                            <li>
+                                <a href="chart-2.html">讨论量最高</a>
+                            </li>
+                            <li>
+                                <a href="chart-3.html">播放量vs讨论量</a>
+                            </li>
+                            <li>
+                                <a href="chart-4.html">TED演讲词汇云图</a>
+                            </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 语言与主题的讨论<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="tab-panel.html">语言种类统计</a>
+                            </li>
+                            <!-- <li>
+                                <a href="tab-panel-2.html">语言种类与浏览量的关系</a>
+                            </li> -->
+                            <li>
+                                <a href="tab-panel-3.html">最受欢迎的十大主题</a>
+                            </li>
+                            </ul>
+                        </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            TED视频时间段分析及相关性
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+               
+            <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                 引言
+                </div>        
+                              
+                            <div class="panel-body"> 
+                                <div class="alert alert-success">
+                                    <strong>分析背景</strong> <br /><br />&nbsp &nbsp &nbsp &nbsp TED大会通常每年一次，但是TEDx及其他小型的活动发生更为频繁。这些演讲的时间是如何分布的，有没有什么举行演讲次数特别多的热门时间段？
+                                </div>
+                                
+                </div>
+            </div>                            
+                 <div  id="a1">
+                              <div id="a2">
+                                  <iframe src="result/TED视频时间段分析及相关性/月分.html"
+                                      height="400px"
+                                      width="520px"
+                                      frameborder="0"
+									  
+                                      scrolling="0"></iframe>
+									 <p>结论：可以看出，二月是TED演讲产出最多的时候，可能跟TED大会的召开有关。一月和八月是产出最少的时候。</p> 
+                              </div>
+							  
+							  <div id="a3">
+							      <iframe src="result/TED视频时间段分析及相关性/星期分.html"
+							          height="350px"
+							          width="350px"
+							          frameborder="0"
+							          scrolling="0"></iframe>
+									  <p>结论：可以看出，周三和周四的演讲量是最多的，而周日的演讲量是最少的。这和之前的直觉“周末的演讲会比较多”相违背。</p>
+							  </div>  
+				</div>
+				
+				
+				
+							   
+
+
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>
